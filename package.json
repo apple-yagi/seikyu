@@ -3,6 +3,7 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
+		"postinstall": "git config --local core.hooksPath .githooks",
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev --test-scheduled",
 		"start": "wrangler dev",
@@ -11,6 +12,7 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "4.20231016.0",
+		"lint-staged": "15.0.2",
 		"typescript": "5.2.2",
 		"wrangler": "3.14.0",
 		"xo": "0.56.0"
